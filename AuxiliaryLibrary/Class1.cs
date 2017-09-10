@@ -9,4 +9,4 @@ namespace AuxiliaryLibrary
     public class Class1
     {
     }
-}
+} 
