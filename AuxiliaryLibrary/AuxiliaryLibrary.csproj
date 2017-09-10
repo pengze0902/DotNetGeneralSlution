@@ -64,6 +64,7 @@
     <Compile Include="EverythingNet\EverythingAPI.cs" />
     <Compile Include="EverythingNet\ExceptionExt.cs" />
     <Compile Include="EverythingNet\StateCode.cs" />
+    <Compile Include="Image\ImageClass.cs" />
     <Compile Include="MSMQ\MsmqHelper.cs" />
     <Compile Include="MSMQ\MsmqListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

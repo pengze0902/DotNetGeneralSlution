@@ -139,10 +139,10 @@ namespace AuxiliaryLibrary.VerificationCode
             return 22.5;
         }
 
-        public Image GetVerificationCodeImage(string verificationCode)
+        public System.Drawing.Image GetVerificationCodeImage(string verificationCode)
         {
             byte[] codeBytes = CreateValidateGraphic(verificationCode);
-            return Image.FromStream(new MemoryStream(codeBytes));
+            return System.Drawing.Image.FromStream(new MemoryStream(codeBytes));
         }
 
     }
