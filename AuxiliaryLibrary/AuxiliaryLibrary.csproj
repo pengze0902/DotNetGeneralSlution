@@ -61,6 +61,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\Cache.cs" />
+    <Compile Include="Cache\Cookie.cs" />
     <Compile Include="Computer\ComputerOperation.cs" />
     <Compile Include="Encrypt\Base64.cs" />
     <Compile Include="Encrypt\BigInteger.cs" />
