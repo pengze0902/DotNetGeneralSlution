@@ -92,6 +92,12 @@
     <Compile Include="Registry\Register.cs" />
     <Compile Include="Registry\RegValueKind.cs" />
     <Compile Include="VerificationCode\VerificationCode.cs" />
+    <Compile Include="Windows\CmdUtil.cs" />
+    <Compile Include="Windows\RegistryBaseKey.cs" />
+    <Compile Include="Windows\RegistryUtil.cs" />
+    <Compile Include="Windows\SystemInfo.cs" />
+    <Compile Include="Windows\SystemInfoHandler.cs" />
+    <Compile Include="Windows\WMIPath.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="EverythingNet\DLL\Everything32.dll" />
