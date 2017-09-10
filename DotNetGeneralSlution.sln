@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetGeneralSlution", "DotNetGeneralSlution\DotNetGeneralSlution.csproj", "{066B7177-7758-47DB-AE09-8DAC995535D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuxiliaryLibrary", "AuxiliaryLibrary\AuxiliaryLibrary.csproj", "{DDADB12B-6A07-4777-8201-ECC937C5AC5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{066B7177-7758-47DB-AE09-8DAC995535D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066B7177-7758-47DB-AE09-8DAC995535D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066B7177-7758-47DB-AE09-8DAC995535D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066B7177-7758-47DB-AE09-8DAC995535D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDADB12B-6A07-4777-8201-ECC937C5AC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDADB12B-6A07-4777-8201-ECC937C5AC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDADB12B-6A07-4777-8201-ECC937C5AC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDADB12B-6A07-4777-8201-ECC937C5AC5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
