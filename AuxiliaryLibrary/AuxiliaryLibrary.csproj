@@ -141,6 +141,9 @@
     <Compile Include="Registry\RegDomain.cs" />
     <Compile Include="Registry\Register.cs" />
     <Compile Include="Registry\RegValueKind.cs" />
+    <Compile Include="Socket\SocketClient.cs" />
+    <Compile Include="Socket\SocketConnection.cs" />
+    <Compile Include="Socket\SocketServer.cs" />
     <Compile Include="ThreadUtil\ThreadUtil.cs" />
     <Compile Include="VerificationCode\VerificationCode.cs" />
     <Compile Include="Windows\CmdUtil.cs" />
@@ -159,6 +162,7 @@
     <Content Include="NPOI\DLL\NPOI.OpenXmlFormats.dll" />
     <Content Include="Redis\DLL\Newtonsoft.Json.dll" />
     <Content Include="Redis\DLL\StackExchange.Redis.dll" />
+    <Content Include="Socket\socket使用方法.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
