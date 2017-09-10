@@ -123,6 +123,8 @@
     <Compile Include="FormatValidation\ParamterCheckExtensions.cs" />
     <Compile Include="FormatValidation\Resources.Designer.cs" />
     <Compile Include="FormatValidation\StringExtensions.cs" />
+    <Compile Include="HTTP\FileItem.cs" />
+    <Compile Include="HTTP\HttpUtils.cs" />
     <Compile Include="Image\ImageClass.cs" />
     <Compile Include="MSMQ\MsmqHelper.cs" />
     <Compile Include="MSMQ\MsmqListener.cs" />
