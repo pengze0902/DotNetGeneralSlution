@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Security" />
@@ -71,6 +72,7 @@
     <Compile Include="Registry\RegDomain.cs" />
     <Compile Include="Registry\Register.cs" />
     <Compile Include="Registry\RegValueKind.cs" />
+    <Compile Include="VerificationCode\VerificationCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="EverythingNet\DLL\Everything32.dll" />
