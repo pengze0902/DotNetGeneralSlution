@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Redis\DLL\Newtonsoft.Json.dll</HintPath>
@@ -57,11 +61,27 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,7 +92,12 @@
   <ItemGroup>
     <Compile Include="Cache\Cache.cs" />
     <Compile Include="Cache\Cookie.cs" />
+    <Compile Include="Cache\Session.cs" />
     <Compile Include="Computer\ComputerOperation.cs" />
+    <Compile Include="Configuration\ConfigurationHelper.cs" />
+    <Compile Include="Configuration\ConfigUtil.cs" />
+    <Compile Include="Configuration\SystemWebSections.cs" />
+    <Compile Include="DB\DbHelper.cs" />
     <Compile Include="Encrypt\Base64.cs" />
     <Compile Include="Encrypt\BigInteger.cs" />
     <Compile Include="Encrypt\Cryptography.cs" />
@@ -83,6 +108,21 @@
     <Compile Include="EverythingNet\EverythingAPI.cs" />
     <Compile Include="EverythingNet\ExceptionExt.cs" />
     <Compile Include="EverythingNet\StateCode.cs" />
+    <Compile Include="FileOrDirHelper\DirFile.cs" />
+    <Compile Include="FileOrDirHelper\FileHelper.cs" />
+    <Compile Include="FileOrDirHelper\FileSharingOperationHelper.cs" />
+    <Compile Include="FileOrDirHelper\IniFile.cs" />
+    <Compile Include="FileOrDirHelper\KillFileHelper.cs" />
+    <Compile Include="FileUtil\FileUtil.cs" />
+    <Compile Include="FileUtil\FileUtil.Stream.Convert.cs" />
+    <Compile Include="FileUtil\IniFile.cs" />
+    <Compile Include="FormatValidation\BinaryMode.cs" />
+    <Compile Include="FormatValidation\ComparsionTemplateOptions.cs" />
+    <Compile Include="FormatValidation\Const.cs" />
+    <Compile Include="FormatValidation\DataFormatValidation.cs" />
+    <Compile Include="FormatValidation\ParamterCheckExtensions.cs" />
+    <Compile Include="FormatValidation\Resources.Designer.cs" />
+    <Compile Include="FormatValidation\StringExtensions.cs" />
     <Compile Include="Image\ImageClass.cs" />
     <Compile Include="MSMQ\MsmqHelper.cs" />
     <Compile Include="MSMQ\MsmqListener.cs" />
@@ -91,9 +131,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Redis\Redis.cs" />
     <Compile Include="Redis\RedisConnection.cs" />
+    <Compile Include="Reflection\Conv.cs" />
+    <Compile Include="Reflection\Extensions.cs" />
+    <Compile Include="Reflection\Reflection.cs" />
+    <Compile Include="Reflection\SerializeUtil.cs" />
+    <Compile Include="Reflection\Sys.cs" />
     <Compile Include="Registry\RegDomain.cs" />
     <Compile Include="Registry\Register.cs" />
     <Compile Include="Registry\RegValueKind.cs" />
+    <Compile Include="ThreadUtil\ThreadUtil.cs" />
     <Compile Include="VerificationCode\VerificationCode.cs" />
     <Compile Include="Windows\CmdUtil.cs" />
     <Compile Include="Windows\RegistryBaseKey.cs" />
