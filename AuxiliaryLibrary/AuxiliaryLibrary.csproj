@@ -41,12 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EverythingNet\Everything.cs" />
+    <Compile Include="EverythingNet\EverythingAPI.cs" />
+    <Compile Include="EverythingNet\ExceptionExt.cs" />
+    <Compile Include="EverythingNet\StateCode.cs" />
     <Compile Include="MSMQ\MsmqHelper.cs" />
     <Compile Include="MSMQ\MsmqListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry\RegDomain.cs" />
     <Compile Include="Registry\Register.cs" />
     <Compile Include="Registry\RegValueKind.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EverythingNet\DLL\Everything32.dll" />
+    <Content Include="EverythingNet\DLL\Everything64.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
