@@ -125,7 +125,7 @@ namespace AuxiliaryLibrary.Reflection
         /// </summary>
         /// <param name="obj">数据</param>
         /// <returns></returns>
-        public static DateTime ToDate(this string obj)
+        public static System.DateTime ToDate(this string obj)
         {
             return Conv.ToDate(obj);
         }
@@ -135,7 +135,7 @@ namespace AuxiliaryLibrary.Reflection
         /// </summary>
         /// <param name="obj">数据</param>
         /// <returns></returns>
-        public static DateTime? ToDateOrNull(this string obj)
+        public static System.DateTime? ToDateOrNull(this string obj)
         {
             return Conv.ToDateOrNull(obj);
         }

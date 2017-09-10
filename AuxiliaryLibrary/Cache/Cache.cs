@@ -44,7 +44,7 @@ namespace AuxiliaryLibrary.Cache
         public static void Set(string cacheKey, object objValue, TimeSpan timeout)
         {
             System.Web.Caching.Cache objCache = HttpRuntime.Cache;
-            objCache.Insert(cacheKey, objValue, null, DateTime.MaxValue, timeout, CacheItemPriority.NotRemovable, null);
+            objCache.Insert(cacheKey, objValue, null, System.DateTime.MaxValue, timeout, CacheItemPriority.NotRemovable, null);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace AuxiliaryLibrary.Cache
         /// <param name="objValue">对象值</param>
         /// <param name="absoluteExpiration">绝对过期时间，过了这个时间点，缓存即过期</param>
         /// <param name="slidingExpiration">滑动过期时间，在此时间内访问缓存，缓存将继续有效</param>
-        public static void Set(string cacheKey, object objValue, DateTime absoluteExpiration,
+        public static void Set(string cacheKey, object objValue, System.DateTime absoluteExpiration,
             TimeSpan slidingExpiration)
         {
             System.Web.Caching.Cache objCache = HttpRuntime.Cache;
