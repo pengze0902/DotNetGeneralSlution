@@ -34,6 +34,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Computer\ComputerOperation.cs" />
+    <Compile Include="Encrypt\Base64.cs" />
+    <Compile Include="Encrypt\BigInteger.cs" />
+    <Compile Include="Encrypt\Cryptography.cs" />
+    <Compile Include="Encrypt\DesEncrypt.cs" />
+    <Compile Include="Encrypt\EncryptXmlDocument.cs" />
+    <Compile Include="Encrypt\Rsa.cs" />
     <Compile Include="EverythingNet\Everything.cs" />
     <Compile Include="EverythingNet\EverythingAPI.cs" />
     <Compile Include="EverythingNet\ExceptionExt.cs" />
