@@ -128,6 +128,7 @@
     <Compile Include="HTTP\FileItem.cs" />
     <Compile Include="HTTP\HttpUtils.cs" />
     <Compile Include="Image\ImageClass.cs" />
+    <Compile Include="Mail\MailHelper.cs" />
     <Compile Include="MSMQ\MsmqHelper.cs" />
     <Compile Include="MSMQ\MsmqListener.cs" />
     <Compile Include="NPOI\ExcelHelper.cs" />
