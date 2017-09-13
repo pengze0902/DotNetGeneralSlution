@@ -147,6 +147,7 @@
     <Compile Include="Socket\SocketClient.cs" />
     <Compile Include="Socket\SocketConnection.cs" />
     <Compile Include="Socket\SocketServer.cs" />
+    <Compile Include="StringUtil\PinYinHelper.cs" />
     <Compile Include="ThreadUtil\ThreadUtil.cs" />
     <Compile Include="VerificationCode\VerificationCode.cs" />
     <Compile Include="Windows\CmdUtil.cs" />
