@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web打印方案</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand" style="font-size: 25px;"><i class="glyphicon glyphicon-print"></i> DotNet通用平台解决方案</span>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="font-size: 20px;"><i class="glyphicon glyphicon-th-large"></i>&nbsp;解决方案</div>
+                    <div class="panel-body">
+                        <div class="list-group" style="font-size: 17px;">
+                            <a href="../InterfaceRequest/Index" class="list-group-item"><i class="glyphicon glyphicon-pencil"></i>&nbsp;&nbsp;接口测试</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li class="active"><span style="font-size: 20px;"><i class="glyphicon glyphicon-info-sign"></i>&nbsp;方案样例</span></li>
+                    </ol>
+                </div>
+                <div class="row" style="margin-top: 15px;">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
