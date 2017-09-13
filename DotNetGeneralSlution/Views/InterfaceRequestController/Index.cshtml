@@ -1,9 +1,21 @@
 ﻿<div class="panel panel-info">
     <div class="panel-heading" style="font-size: 20px;">接口测试</div>
     <div style="margin-top: 10px; ">
-           
+        <div class="input-group" style="margin-top: 10px;">
+            <span class="input-group-addon">接口URL：</span>
+            <input type="text" class="form-control" placeholder="url地址" style="width: 1000px;">
+        </div>
+        <div class="input-group" style="margin-top: 10px;">
+            <span class="input-group-addon">请求方式：</span>
+            <input type="text" class="form-control" placeholder="请求方式：POST;GET" style="width: 1000px;">
+            <span class="input-group-addon">请求次数：</span>
+            <input type="text" class="form-control" placeholder="请求次数" style="width: 1000px;">
+        </div>
+        <div class="input-group" style="width: auto; margin-top: 10px;">
+            <span class="input-group-addon">请求数据：</span><textarea class="form-control" rows="15"></textarea>
+            <span class="input-group-addon">返回数据：</span><textarea class="form-control" rows="15"></textarea>
+        </div>
     </div>
-
 </div>
 @section scripts{
 
