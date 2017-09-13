@@ -1,22 +1,46 @@
 ﻿<div class="panel panel-info">
     <div class="panel-heading" style="font-size: 20px;">接口测试</div>
-    <div style="margin-top: 10px; ">
+    <div style="margin-top: 10px;">
+        <div style="text-align: center;">
+            <button type="button" class="btn btn-success" id="btnSave">提交测试请求</button>
+        </div>
+        
         <div class="input-group" style="margin-top: 10px;">
             <span class="input-group-addon">接口URL：</span>
-            <input type="text" class="form-control" placeholder="url地址" style="width: 1000px;">
+            <input type="text" class="form-control" placeholder="url地址" id="requestUrl">
         </div>
         <div class="input-group" style="margin-top: 10px;">
             <span class="input-group-addon">请求方式：</span>
-            <input type="text" class="form-control" placeholder="请求方式：POST;GET" style="width: 1000px;">
+            <input type="text" class="form-control" placeholder="请求方式：POST/GET" id="requestMethod">
             <span class="input-group-addon">请求次数：</span>
-            <input type="text" class="form-control" placeholder="请求次数" style="width: 1000px;">
+            <input type="text" class="form-control" placeholder="请求次数" id="requestNumber">
         </div>
         <div class="input-group" style="width: auto; margin-top: 10px;">
-            <span class="input-group-addon">请求数据：</span><textarea class="form-control" rows="15"></textarea>
-            <span class="input-group-addon">返回数据：</span><textarea class="form-control" rows="15"></textarea>
+            <span class="input-group-addon">请求数据：</span>
+            <textarea class="form-control" rows="20" placeholder="数据格式：{参数名：参数值},例：{Name:ceshi}" id="requestData"></textarea>
+            <span class="input-group-addon">返回数据：</span>
+            <textarea class="form-control" rows="20" id="returnData"></textarea>
         </div>
     </div>
 </div>
 @section scripts{
-
+    <script type="text/javascript">
+        //保存文本信息
+        $("#btnSave").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/InterfaceRequest/ReqInter",
+                data: "{'requestUrl':'" + $("#requestUrl").val() + "'requestMethod':'" + $("#requestMethod").val() + "'requestNumber':'" + $("#requestNumber").val() + "'requestData':'" + $("#requestData").val()+ "'}",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                    var returnContet = JSON.stringify(result);
+                    $("#returnData").val(returnContet);
+                },
+                error: function (message) {
+                    alert("数据获取失败！" + message);
+                }
+            });
+        });
+    </script>
 }

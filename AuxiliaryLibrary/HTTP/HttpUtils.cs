@@ -12,7 +12,7 @@ namespace AuxiliaryLibrary.HTTP
     /// <summary>
     /// 网络工具类。
     /// </summary>
-    public sealed class WebUtils
+    public  class WebUtils
     {
         /// <summary>
         /// 请求与响应的超时时间
@@ -197,7 +197,7 @@ namespace AuxiliaryLibrary.HTTP
                 req.ServicePoint.Expect100Continue = false;
                 req.Method = method;
                 req.KeepAlive = true;
-                req.UserAgent = "WeChat";
+                req.UserAgent = "DotNetShare";
                 req.Timeout = Timeout;
                 return req;
             }
