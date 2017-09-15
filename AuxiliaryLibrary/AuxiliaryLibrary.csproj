@@ -90,6 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barcode\BarcodeHelper.cs" />
     <Compile Include="Cache\Cache.cs" />
     <Compile Include="Cache\Cookie.cs" />
     <Compile Include="Cache\Session.cs" />
