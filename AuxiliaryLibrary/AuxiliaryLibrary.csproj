@@ -31,6 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\IIS.Microsoft.Web.Administration.8.5.9600.17042\lib\Microsoft.Web.Administration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -62,6 +66,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
@@ -90,6 +95,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barcode\BarcodeHelper.cs" />
     <Compile Include="Cache\Cache.cs" />
     <Compile Include="Cache\Cookie.cs" />
     <Compile Include="Cache\Session.cs" />
@@ -144,6 +150,8 @@
     <Compile Include="Registry\RegDomain.cs" />
     <Compile Include="Registry\Register.cs" />
     <Compile Include="Registry\RegValueKind.cs" />
+    <Compile Include="SiteDeployment\IISDeployment.cs" />
+    <Compile Include="SiteDeployment\NewWebSiteInfo.cs" />
     <Compile Include="Socket\SocketClient.cs" />
     <Compile Include="Socket\SocketConnection.cs" />
     <Compile Include="Socket\SocketServer.cs" />
@@ -183,6 +191,8 @@
     <Content Include="Redis\DLL\StackExchange.Redis.dll" />
     <Content Include="Socket\socket使用方法.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
