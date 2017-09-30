@@ -159,6 +159,20 @@
     <Compile Include="XML\XmlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AsposeDLL\Aspose.Cells.dll" />
+    <Content Include="AsposeDLL\Aspose.Diagram.dll" />
+    <Content Include="AsposeDLL\Aspose.Editor.Client.dll" />
+    <Content Include="AsposeDLL\Aspose.Editor.Desktop.dll" />
+    <Content Include="AsposeDLL\Aspose.Editor.Server.dll" />
+    <Content Include="AsposeDLL\Aspose.Flash.dll" />
+    <Content Include="AsposeDLL\Aspose.Form.dll" />
+    <Content Include="AsposeDLL\Aspose.Network.dll" />
+    <Content Include="AsposeDLL\Aspose.Pdf.dll" />
+    <Content Include="AsposeDLL\Aspose.Pdf.Kit.dll" />
+    <Content Include="AsposeDLL\Aspose.Recognition.dll" />
+    <Content Include="AsposeDLL\Aspose.Slides.dll" />
+    <Content Include="AsposeDLL\Aspose.Tasks.dll" />
+    <Content Include="AsposeDLL\Aspose.Words.dll" />
     <Content Include="EverythingNet\DLL\Everything32.dll" />
     <Content Include="EverythingNet\DLL\Everything64.dll" />
     <Content Include="NPOI\DLL\NPOI.dll" />
