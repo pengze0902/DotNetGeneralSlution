@@ -1,7 +1,55 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿<div class="panel panel-info">
+    <div class="panel-heading" style="font-size: 20px;">Aspose解决方案</div>
+    <div style="margin-top: 10px;">
+        <div style="text-align: center;">
+            <form action="/Aspose/UploadFile" method="post" enctype="multipart/form-data">
+                <input type="file" name="file"/><br/>
+                <input type="submit" value="提交"/>
+            </form>
+        </div>
+    </div>
+    <div style="margin-top: 10px;">
+        <div style="text-align: center;">
+            <button type="button" class="btn btn-success" id="CreateDoc">创建文档</button>
+        </div>
+        <div style="text-align: center;">
+            <button type="button" class="btn btn-success" id="DocForPDF">Doc For PDF</button>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        //保存文本信息
+        $("#CreateDoc").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Aspose/AsposeDocument",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                    var returnContet = JSON.stringify(result);
+                    $("#returnData").val(returnContet);
+                },
+                error: function (message) {
+                    alert("数据获取失败！" + message);
+                }
+            });
+        });
+        //保存文本信息
+        $("#DocForPDF").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Aspose/DocForPDF",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                    var returnContet = JSON.stringify(result);
+                    $("#returnData").val(returnContet);
+                },
+                error: function (message) {
+                    alert("数据获取失败！" + message);
+                }
+            });
+        });
+    </script>
 }
-
-<h2>Index</h2>
-
