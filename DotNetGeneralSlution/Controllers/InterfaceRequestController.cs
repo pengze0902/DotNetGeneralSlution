@@ -10,7 +10,7 @@ using DotNetGeneralSlution.Models;
 
 namespace DotNetGeneralSlution.Controllers
 {
-    public class InterfaceRequestControllerController : Controller
+    public class InterfaceRequestController : Controller
     {
         // GET: InterfaceRequestController
         public ActionResult Index()
