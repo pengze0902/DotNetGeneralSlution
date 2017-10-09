@@ -129,6 +129,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\pdfobject.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +138,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AsposeController.cs" />
     <Compile Include="Controllers\InterfaceRequestController.cs" />
+    <Compile Include="Controllers\PdfController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -154,6 +156,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Aspose\Index.cshtml" />
+    <Content Include="Views\Pdf\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
