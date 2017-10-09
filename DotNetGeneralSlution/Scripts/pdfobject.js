@@ -27,9 +27,9 @@
     "use strict";
     //jshint unused:true
 
-    //PDFObject is designed for client-side (browsers), not server-side (node)
-    //Will choke on undefined navigator and window vars when run on server
-    //Return boolean false and exit function when running server-side
+    //PDFObject是为客户端（浏览器）设计的，而不是服务器端（节点）
+    //在服务器上运行时会阻塞未定义的导航器和窗口vars
+    //运行服务器端时返回boolean false和exit函数
 
     if(typeof window === "undefined" || typeof navigator === "undefined"){ return false; }
 
@@ -65,22 +65,22 @@
         return ax;
     };
 
-    //IE11 still uses ActiveX for Adobe Reader, but IE 11 doesn't expose
-    //window.ActiveXObject the same way previous versions of IE did
-    //window.ActiveXObject will evaluate to false in IE 11, but "ActiveXObject" in window evaluates to true
-    //so check the first one for older IE, and the second for IE11
-    //FWIW, MS Edge (replacing IE11) does not support ActiveX at all, both will evaluate false
-    //Constructed as a method (not a prop) to avoid unneccesarry overhead -- will only be evaluated if needed
+    //IE11仍然使用ActiveX for Adobe Reader，但IE 11不会公开
+    //window.ActiveXObject与以前版本的IE相同
+    //window.ActiveXObject将在IE 11中求值为false，但窗口中的“ActiveXObject”计算结果为true
+    //所以检查第一个旧的IE，第二个为IE11
+    // FWIW，MS Edge（替代IE11）根本不支持ActiveX，两者都将评估为false
+    //构造为一种方法（而不是一个prop），以避免不必要的开销 - 只有在需要时才会进行评估
     isIE = function (){ return !!(window.ActiveXObject || "ActiveXObject" in window); };
 
-    //If either ActiveX support for "AcroPDF.PDF" or "PDF.PdfCtrl" are found, return true
-    //Constructed as a method (not a prop) to avoid unneccesarry overhead -- will only be evaluated if needed
+    //如果找到“AcroPDF.PDF”或“PDF.PdfCtrl”的ActiveX支持，则返回true
+    //构造为一种方法（而不是一个prop），以避免不必要的开销 - 只有在需要时才会进行评估
     supportsPdfActiveX = function (){ return !!(createAXO("AcroPDF.PDF") || createAXO("PDF.PdfCtrl")); };
 
-    //Determines whether PDF support is available
+    //确定PDF支持是否可用
     supportsPDFs = (supportsPdfMimeType || (isIE() && supportsPdfActiveX()));
 
-    //Create a fragment identifier for using PDF Open parameters when embedding PDF
+    //在嵌入PDF时创建使用PDF打开参数的片段标识符
     buildFragmentString = function(pdfParams){
 
         var string = "",
@@ -94,7 +94,7 @@
                 }
             }
 
-            //The string will be empty if no PDF Params found
+            //如果没有找到PDF参数，字符串将为空
             if(string){
 
                 string = "#" + string;
@@ -123,7 +123,7 @@
 
     getTargetElement = function (targetSelector){
 
-        //Default to body for full-browser PDF
+        //默认为全浏览器PDF
         var targetNode = document.body;
 
         //If a targetSelector is specified, check to see whether
@@ -183,7 +183,7 @@
     embed = function(url, targetSelector, options){
 
         //Ensure URL is available. If not, exit now.
-        if(typeof url !== "string"){ return embedError("URL is not valid"); }
+        if (typeof url !== "string") { return embedError("URL无效"); }
 
         //If targetSelector is not defined, convert to boolean
         targetSelector = (typeof targetSelector !== "undefined") ? targetSelector : false;
@@ -203,10 +203,10 @@
             targetNode = getTargetElement(targetSelector),
             fallbackHTML = "",
             pdfOpenFragment = "",
-            fallbackHTML_default = "<p>This browser does not support inline PDFs. Please download the PDF to view it: <a href='[url]'>Download PDF</a></p>";
+            fallbackHTML_default = "<p>此浏览器不支持内联PDF。 请下载PDF查看: <a href='[url]'>下载 PDF</a></p>";
 
         //If target element is specified but is not valid, exit without doing anything
-        if(!targetNode){ return embedError("Target element cannot be determined"); }
+        if (!targetNode) { return embedError("目标元素无法确定"); }
 
 
         //page option overrides pdfOpenParams, if found
@@ -239,7 +239,7 @@
 
             }
 
-            return embedError("This browser does not support embedded PDFs");
+            return embedError("此浏览器不支持嵌入式PDF");
 
         }
 

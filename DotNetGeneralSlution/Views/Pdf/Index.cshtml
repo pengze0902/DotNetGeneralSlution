@@ -1,14 +1,17 @@
 ﻿<div class="panel panel-info">
-    <div class="panel-heading" style="font-size: 20px;">Aspose解决方案</div>
+    <div class="panel-heading" style="font-size: 20px;">PDFObject插件预览PDF</div>
     <div style="margin-top: 10px;">
         <div style="text-align: center;">
             <div id="example1"></div>
-
         </div>
     </div>
 
 </div>
 @section scripts{
-    <script type="text/javascript">
-        new PDFObject({url:"/File/A#B.pdf"}).embed("#example1");
-    </script>
+    <script src="/Scripts/pdfobject.js"></script>
+    <script>PDFObject.embed("/File/A_B.pdf", "#example1");</script>
+    <style>
+        .pdfobject-container { height: 500px;}
+        .pdfobject { border: 1px solid #666; }
+    </style>
+}
